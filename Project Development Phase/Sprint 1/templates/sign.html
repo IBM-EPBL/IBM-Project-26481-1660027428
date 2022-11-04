@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login Form</title>
+</head>
+<style>
+     body
+ {
+   margin:0px; 
+   background-image: url(nutrition.jpg);
+   background-repeat: no-repeat;
+   background-size: 100% 100%;
+   background-attachment: fixed;
+   color:#030103; 
+   font-family:Arial, Helvetica, sans-serif;
+ }
+ #main
+ {
+   width:600px; 
+   height:260px; 
+   margin-left:auto; 
+   margin-right:auto; 
+   border-radius:5px; 
+   padding-left:10px; 
+   margin-top:100px;
+   border: #0d4229; 
+   padding-top:20px;
+ }
+ #main table
+ {
+   font-family:"Comic Sans MS";
+   position: relative; 
+   margin-top: 80px; 
+   margin-left: -100px;
+   border: 2px solid black; 
+   width:500px; 
+   padding: 10px; 
+   background-color: rgba(164, 219, 219, 0.24); 
+   border-radius: 30px 30px 30px 30px; 
+ } 
+/* css code for textbox */
+#main .tb
+{
+  height:28px; 
+  width:230px; 
+  border:1px solid #faf9fa; 
+  color:#080708; 
+  font-weight:bold; 
+  border-left:2px solid #fbf8fc; 
+  opacity:0.9;
+}
+
+ /* css code for button*/
+ #main .btn
+ {
+  width:80px; 
+  height:32px; 
+  outline:none;  
+  font-weight:bold; 
+  border:0px solid #0d4229; 
+  text-shadow: 0px 0.5px 0.5px rgb(187, 22, 22);	
+  border-radius: 2px; 
+  font-weight: 600; 
+  color: hsl(253, 92%, 43%); 
+  letter-spacing: 1px; 
+  font-size:14px; 
+  -webkit-transition: 1s; 
+  -moz-transition: 1s; 
+  transition: 1s;
+ }
+
+ #main .btn:hover
+ {
+  background-color:#27a465; 
+  outline:none;  
+  border-radius: 2px; 
+  color:#f1f1f1; 
+  border:1px solid #f1f1f1;
+ }
+ 
+</style>
+  <body>
+  <!-- Main div code -->
+  <div id="main">
+  <!-- Login box -->
+  <div class="login">
+  <table cellspacing="2" align="center" cellpadding="8" border="0">
+
+  <tr>
+  <td>Enter Email :</td>
+  <td><input type="text" placeholder="Enter Email" id="email" class="tb" /></td>
+  </tr>
+  <tr>
+  <td>Enter Password :</td>
+  <td><input type="password" placeholder="Enter Password" id="pwd1" class="tb" /></td>
+  </tr>
+  <tr>
+  <td></td>
+  <td>
+  <input type="submit" value="Login" class="btn" onClick="login()" /></td>
+  </tr>
+  </table>
+  </div>
+     <!-- login box div ending here.. -->
+  </div>
+  <!-- Main div ending here... -->
+<script>
+      function login()
+  {
+      var uname = document.getElementById("email").value;
+      var pwd = document.getElementById("pwd1").value;
+      var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+      if(uname =='')
+      {
+          alert("please enter email.");
+      }
+      else if(pwd=='')
+      {
+    alert("enter the password");
+      }
+      else if(!filter.test(uname))
+      {
+          alert("Enter valid email id.");
+      }
+      else if((!filter.test(pwd)) && (pwd.length < 6 || pwd.length > 10))
+      {
+          alert("Password min and max length is 6.");
+      }
+      else
+      {
+  alert('Thank You for Login & You are Redirecting to Website');
+//Redirecting to other page or website code or you can set your own html page.
+     window.location = "http://127.0.0.1:5500/details.html";
+          }
+  }
+</script>
+
+</body>
+</html>
