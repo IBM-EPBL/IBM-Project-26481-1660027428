@@ -1,10 +1,17 @@
 # IBM-Project-26481-1660027428
+
 AI-powered Nutrition Analyzer for Fitness Enthusiasts
+
 Team ID : PNT2022TMID30185
+
 TEAM MEMBERS:
+
 SIVARANJANI V
+
 NAVEENA V
+
 SENTHILRAJA R
+
 SABARISH E
 
 DEMO VIDEO YOUTUBE LINK: https://youtu.be/PSKUxYwsq5Y
